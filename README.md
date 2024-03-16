@@ -19,7 +19,7 @@ $ mkdir CypressAutomationFramework
 $ cd CypressAutomationFramework
 
 # 2: Clone the repo
-$ git clone 
+$ git clone https://github.com/YoJava93/Cypress-UI-Automation-Framework.git
 
 # 3: Install dependencies
 $ npm init
