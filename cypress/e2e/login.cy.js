@@ -15,13 +15,12 @@ describe('Login: tests to verify login functionalities', () => {
        cy.fixture('users').then((user) => {
         auth.login(user.user1.username, user.user1.password);
        })
-
+       
        cy.textExists('You logged into a secure area!');
 
        auth.logout();
 
        cy.textExists('You logged out of the secure area!');
- 
     })
 
     it('Test login funtionality sad path, wrong username and correct password', () => {

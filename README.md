@@ -8,7 +8,6 @@ Electron:   27.1.3
 Node:       v20.11.1                
 ```
 
-
 ## Getting up and running
 
 ```bash
@@ -24,7 +23,7 @@ $ git clone https://github.com/YoJava93/Cypress-UI-Automation-Framework.git
 # 3: Install dependencies
 $ npm init
 
-# 3: Install cypress
+# 4: Install cypress
 $ npm install cypress    
 ```
 
