@@ -36,7 +36,7 @@ $ npx cypress open
 # then choose in which browser you want to run the tests
 # and once the browser open click on login tests to run them
 
-# See the cypress CLI page for more info
+# See the cypress CLI page for more info https://docs.cypress.io/guides/guides/command-line
 
 ```
 
@@ -47,8 +47,12 @@ The environment details are stored in the `cypress.config.js` file. To change en
 ## Tech Details
 
 * Cypress - Self proclaiming E2E test framework. Designed to keep UI tests simple and reliable. https://www.cypress.io/
-
-* Cypress/Mocha + Chai - Cypress uses the Mocha & Chai combination for test runner and assertion library.
+* Time Travel: Cypress takes snapshots as your tests run. Hover over commands in the Command Log to see exactly what happened at each step.
+* Automatic Waiting: Never add waits or sleeps to your tests.
+* Screenshots and Videos: View screenshots taken automatically on failure, or videos of your entire test suite when run from the CLI.
+* Cross browser Testing
+* Cypress processes respond to the application’s events and processes command in real-time. With real-time reloads in Cypress, tests are reloaded
+automatically as and when changes are made in the app.
 
 ## Project Structure
 
@@ -60,10 +64,10 @@ The environment details are stored in the `cypress.config.js` file. To change en
 ./cypress/support/
 
 # Page helpers are stored in here. This is where custom cypress commands
-# are stored such as: cy.visitLogintPage();
+# are stored such as: cy.NavigateTo();
 ./cypress/support/pages/
 
-# Storage of static data. Can be accessed by cy.fixtures('filename') command. I suggest a read up on the async nature of Cypress prior to this. An example of its use resides in the ./cypress/pages/product.js file, the cy.visitProductPage() function...
+# Storage of static data. Can be accessed by cy.fixtures('filename') command. 
 ./cypress/fixtures/
 
 # Location of all test files
