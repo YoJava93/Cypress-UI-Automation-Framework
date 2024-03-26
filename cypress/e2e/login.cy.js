@@ -6,11 +6,9 @@ describe('Login: tests to verify login functionalities', () => {
 
    // before each method, to clear the cookies and to navigate to login page.
     beforeEach(() => {
-        cy.clearAllCookies();
         navigateTo.loginPage(); 
     })
 
-    
     it('Test login funtionality hapy path, correct username and password', () => {
        cy.fixture('users').then((user) => {
         auth.login(user.user1.username, user.user1.password);
@@ -70,11 +68,5 @@ describe('Login: tests to verify login functionalities', () => {
 
       cy.textExists('Your password is invalid!');
    })
-
-  /*
-   Depending on the login functionality implementation I would also add, 
-  few more tests to verify the number of characters allowed for username and password, 
-  provided login does not have any limitation for characters allowed for username and password.
-  */
 
   })
