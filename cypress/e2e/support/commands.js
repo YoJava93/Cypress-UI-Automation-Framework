@@ -24,9 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-// const { faker } = require("@faker-js/faker/.");
+
 import { faker } from '@faker-js/faker';
-// import { wrap } from 'cypress/types/lodash';
 
 
 Cypress.Commands.add('textExists', (text) => {
