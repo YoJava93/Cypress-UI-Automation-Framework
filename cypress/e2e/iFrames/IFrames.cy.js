@@ -1,8 +1,7 @@
 import { navigateTo } from "../../support/pages/NavigationPage";
-import { IFrames } from "../../support/pages/IFrames";
-import _ from 'lodash';
+import { IFramesPage } from "../support/pages/IFramesPage";
 
-const iFrames = new IFrames();
+const iFramesPage = new IFramesPage();
 
 describe("Testing iframe", () => {
 
@@ -12,8 +11,9 @@ describe("Testing iframe", () => {
 
     it("Testing the iFrame happy path", () => {
 
-        cy.get(iFrames.iFrameButtom).click();
-        cy.switchToIframe(iFrames.externalIframeVideo).click()
+        cy.get(iFramesPage.iFrameButton).click();
+        
+        cy.switchToIframe(iFramesPage.externalIframeVideo).find(iFramesPage.videoButton).click();
 
     })
 

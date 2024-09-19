@@ -7,7 +7,7 @@ module.exports = defineConfig({
       main : "/"
     },
      // define how many times the test should re-run if it failed
-     retries : 1,
+     retries : 0,
      // the waiting time for the page to load and to find/click on elements
      defaultCommandTimeout: 2000,
      // height and width of the opening window when running the tests
