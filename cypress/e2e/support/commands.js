@@ -24,11 +24,14 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-// function to validate if test exists
+// const { faker } = require("@faker-js/faker/.");
+import { faker } from '@faker-js/faker';
+// import { wrap } from 'cypress/types/lodash';
+
+
 Cypress.Commands.add('textExists', (text) => {
     cy.contains(text).should('exist');
 })
-
 
 Cypress.Commands.add('elementIsVisible', (selector) => {
     cy.get(selector).should('be.visible');

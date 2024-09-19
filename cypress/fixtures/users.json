@@ -1,31 +1,8 @@
 {
+  
   "user1" : {
-      "username" : "practice",
-      "password" : "SuperSecretPassword!"
-  },
-  "user2" : {
-      "wrongUsername" : "wrongUsername",
-      "password" : "SuperSecretPassword!"
-  },
-  "user3" : {
-      "username" : "practice",
-      "wrongPassword" : "wrongPassword"
-  },
-  "user4" : {
-    "emptyUsername" : "",
-    "password" : "SuperSecretPassword!"
-},
-"user5" : {
     "username" : "practice",
-    "emptyPassword" : ""
-},
-"user6" : {
-    "usernameWrongCase" : "Practice",
     "password" : "SuperSecretPassword!"
-},
-"user7" : {
-    "username" : "practice",
-    "passwordWrongCase" : "supersecretpassword!"
 }
 
 }
