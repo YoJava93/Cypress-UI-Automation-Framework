@@ -57,20 +57,20 @@ Cypress.Commands.add('switchToIframe', (iFrameSelector) => {
     cy.get(iFrameSelector)
     .its('0.contentDocument.body') // Access the content document of the iFrame
     .should('not.be.empty')
-    .then(wrap); // Wrap the iFrame's body so Cypress commands can be used within it
+    .then(cy.wrap); // Wrap the iFrame's body so Cypress commands can be used within it
 })
 
-Cypress.Commands.add('swithToNestedIframe', (iFrameSelectors) => {
-    let currentContext = cy;  // Initialize the context starting from the main document
-    iFrameSelectors.forEach((selector) => {
-        // Iterate over each iFrame selector and switch context to that iFrame
-        currentContext = currentContext.get(selector)
-                                       .its('0.contentDocument.body')
-                                       .should('not.be.empty')
-                                       .then(cy.wrap);
-    })
-    return currentContext;
-})
+// Cypress.Commands.add('swithToNestedIframe', (iFrameSelectors) => {
+//     let currentContext = cy;  // Initialize the context starting from the main document
+//     iFrameSelectors.forEach((selector) => {
+//         // Iterate over each iFrame selector and switch context to that iFrame
+//         currentContext = currentContext.get(selector)
+//                                        .its('0.contentDocument.body')
+//                                        .should('not.be.empty')
+//                                        .then(cy.wrap);
+//     })
+//     return currentContext;
+// })
 
 Cypress.Commands.add('switchToMainIframe', () => {
     return cy;// Returning Cypress's main context

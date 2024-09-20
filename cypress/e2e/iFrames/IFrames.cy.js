@@ -13,7 +13,11 @@ describe("Testing iframe", () => {
 
         cy.get(iFramesPage.iFrameButton).click();
         
-        cy.switchToIframe(iFramesPage.externalIframeVideo).find(iFramesPage.videoButton).click();
+        //                                                        something wrong with a locator
+        cy.switchToIframe(iFramesPage.externalTextIframe).find(iFramesPage.externalTextIframeTypingBox)
+                                                         .type("Blah")
+
+        // if i want to move to inner iframe i move one be one form upper to inner
 
     })
 

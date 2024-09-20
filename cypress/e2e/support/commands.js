@@ -59,7 +59,7 @@ Cypress.Commands.add('switchToIframe', (iFrameSelector) => {
     cy.get(iFrameSelector)
     .its('0.contentDocument.body') // Access the content document of the iFrame
     .should('not.be.empty')
-    .then(body => cy.wrap(body)); // Wrap the iFrame's body so Cypress commands can be used within it
+    .then(cy.wrap); // Wrap the iFrame's body so Cypress commands can be used within it
 })
 
 Cypress.Commands.add('swithToNestedIframe', (iFrameSelectors) => {
