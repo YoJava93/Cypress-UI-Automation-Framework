@@ -26,6 +26,8 @@
 
 // import { faker } from "@faker-js/faker/.";
 
+import 'cypress-drag-drop';
+
 // function to validate if test exists
 Cypress.Commands.add('textExists', (text) => {
     cy.contains(text).should('exist');
@@ -65,3 +67,12 @@ Cypress.Commands.add('switchToIframe', (iFrameSelector) => {
 Cypress.Commands.add('switchToMainIframe', () => {
     return cy;// Returning Cypress's main context
 })
+
+Cypress.Commands.add('dragAndDrop', (sourceSelector, targetSelector) => {
+    cy.get(sourceSelector)
+      .trigger('mousedown', { which: 1 });
+  
+    cy.get(targetSelector)
+      .trigger('mousemove')
+      .trigger('mouseup');
+  });
