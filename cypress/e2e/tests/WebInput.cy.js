@@ -1,6 +1,7 @@
 import { navigateTo } from "../../support/pages/NavigationPage";
 import { WebInputPage } from "../../support/pages/WebInputPage";
 
+
 const webInputPage = new WebInputPage();
 
 describe("Web input testing", () => {
