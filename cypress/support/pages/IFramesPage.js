@@ -5,11 +5,7 @@ export class IFramesPage {
     }
 
     get externalIframeVideo() {
-        return 'iframe[id="iframe-youtube"]'
-    }
-
-    get videoButton() {
-        return 'button[class="ytp-large-play-button ytp-button ytp-large-play-button-red-bg"]'
+        return 'video[class="video-stream html5-main-video"]'
     }
 
     get externalTextIframe() {
@@ -17,8 +13,7 @@ export class IFramesPage {
     }
 
     get externalTextIframeTypingBox() {
-        return 'body[data-id="mce_0"]'
+        return 'body[id="tinymce"]'
     }
-
 
 }

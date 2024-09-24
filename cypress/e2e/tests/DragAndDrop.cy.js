@@ -17,7 +17,11 @@ describe("Testing drag and drop", () => {
         cy.get(dragAndDropCircle.dragAndDropCircleButton).click();
         // cy.dragAndDrop(dragAndDropCircle.draggableRed, dragAndDropCircle.target)
 
-        cy.get(dragAndDropCircle.draggableRed).drag(dragAndDropCircle.target, { force: true })
+            // it gets stuck when trying to drag the circle
+        // cy.get(dragAndDropCircle.draggableRed).should('be.visible')
+        //                                       .drag(dragAndDropCircle.target, { force: true })
+
+        cy.dragAndDrop(dragAndDropCircle.target, dragAndDropCircle.draggableRed);
 
         cy.get(dragAndDropCircle.target).find('div.red')
                                         .should('have.attr', 'draggable', 'true');
