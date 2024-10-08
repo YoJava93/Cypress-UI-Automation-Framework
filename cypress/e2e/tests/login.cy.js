@@ -25,5 +25,23 @@ describe("Testing login functionality", () => {
         cy.get(loginPage.logoutButton).click()
     })
 
-})
+//     it('should submit with valid form', () => {
+//         // Submit form flow
+//         cy.getByData('new-user-email' ).type(TEST_USER_EMAIL)
+//         cy.fillSelect ('new-user-system-role', ROLES.SUPERVISOR)
+//         cy.getByData('new-facility-roles').click()
+//         cy.getByData('autocomplete-checkbox-0').click()
+//         cy.getByData ('new-facility-roles').find('input' ).blur()
+//         cy.getByData('submit-create-user').click()
 
+//         // END Submit form flow
+//         cy.wait('@create').then((interception) => {
+//         const requestBody = interception.request.body
+
+//         assert.isTrue(createUserRequestSchema.isValidSync(requestBody) )
+//         cy.getByData('toast')
+//         .should ( 'be.visible')
+//         .should('include.text', 'Email with activation link sent successful')})
+// })
+
+})
