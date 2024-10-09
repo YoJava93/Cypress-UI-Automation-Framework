@@ -51,11 +51,11 @@ Cypress.Commands.add('generateRandomUser', () => {
     }
 })
 
-Cypress.Commands.add('handlePromt', (response) => {
+Cypress.Commands.add('handlePrompt', (response) => {
     cy.window().then((win) => {
-        cy.stub(win, 'prompt').returns(response)
-    })
-})
+        cy.stub(win, 'prompt').returns(null); // Simulates user closing the prompt
+      });
+    });
 
 Cypress.Commands.add('switchToIframe', (iFrameSelector) => {
     cy.get(iFrameSelector)

@@ -17,9 +17,12 @@ describe("Testing login functionality", () => {
             cy.get(loginPage.username).type(user.user1.username)
             cy.get(loginPage.password).type(user.user1.password)
         })
-            cy.get(loginPage.loginButton).click();
 
-        cy.handlePromt("Handling the succes prompt")
+        cy.get(loginPage.loginButton).click();
+
+        cy.log("Hangling the prompt")
+
+        cy.handlePrompt("Handling the succes prompt")
 
         cy.textExists("You logged into a secure area!")
         cy.get(loginPage.logoutButton).click()
